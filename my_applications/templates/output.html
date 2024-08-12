@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 10px;
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+        <table>
+            <tr>
+                <th colspan="2">
+                    <center>view details</center>
+                </th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{Name}}</td>
+            </tr>
+            <tr>
+                <th>password</th>
+                <td>{{password}}</td>
+            </tr>
+            <tr>
+                <th>address</th>
+                <td>{{address}}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{email}}</td>
+            </tr>
+        </table>
+    {% endblock %}
+</body>
+</html>
